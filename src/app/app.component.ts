@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { IComputer } from './computer.model';
 
 @Component({
   selector: 'my-app',
@@ -6,5 +7,12 @@ import { Component} from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  computers;
+  computers: IComputer[] = [];
+  onCreateDesktop(pcInfo) {
+    this.computers.push({
+      type: 'desktop',
+      department: pcInfo.department,
+      description: pcInfo.description
+    })
+  }
 }

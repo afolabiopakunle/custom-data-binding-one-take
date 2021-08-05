@@ -1,20 +1,15 @@
-<div class="container">
 <div class="row">
   <div class="col-xs-12">
-    <p class='fs-1 text-uppercase text-center fw-bolder'>Add New Computers</p>
+    <p class="fs-1 text-uppercase text-center fw-bolder">Add New Computers</p>
     <label class="fw-bold">Receiving Department</label>
-    <input type="text" class="form-control" [(ngModel)]="department">
-    <label class="fw-bold">Description</label>
-    <input type="text" class="form-control" [(ngModel)]="description">
-    <br>
-    <button
-      class="btn btn-primary me-3"
-      (click)="addDesktop()">Add Desktop</button>
-    <button
-      class="btn btn-info"
-      (click)="addLaptop()">Add Laptop</button>
+    <input type="text" class="form-control" [(ngModel)]="department" />
+    <label class="fw-bold mt-3">Description</label>
+    <input type="text" class="form-control" [(ngModel)]="description" />
+    <br />
+    <button class="btn btn-primary me-3" (click)="addDesktop()">
+      Add Desktop
+    </button>
+    <button class="btn btn-info" (click)="addLaptop()">Add Laptop</button>
   </div>
 </div>
-<hr>
-
-</div>
+<hr />
