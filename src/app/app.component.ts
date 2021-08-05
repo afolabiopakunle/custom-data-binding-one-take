@@ -8,6 +8,7 @@ import { IComputer } from './computer.model';
 })
 export class AppComponent  {
   computers: IComputer[] = [];
+
   onCreateDesktop(pcInfo) {
     this.computers.push({
       type: 'desktop',
@@ -15,4 +16,13 @@ export class AppComponent  {
       description: pcInfo.description
     })
   }
+  
+  onCreateLaptop(pcInfo) {
+    this.computers.push({
+      type: 'laptop',
+      department: pcInfo.department,
+      description: pcInfo.description
+    })
+  }
+
 }

@@ -1,6 +1,7 @@
 <div class="container">
   <app-cockpit 
   (createDesktop)="onCreateDesktop($event)"
+  (createLaptop)="onCreateLaptop($event)"
   ></app-cockpit>
 
   <app-display *ngFor="let computer of computers" [computer]='computer'></app-display>

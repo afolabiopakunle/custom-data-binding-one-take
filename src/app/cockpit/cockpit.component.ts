@@ -7,23 +7,32 @@ import { IComputer } from '../computer.model';
   styleUrls: ['./cockpit.component.css']
 })
 export class CockpitComponent implements OnInit {
-  @Output() createDesktop = new EventEmitter<IComputer>()
+  @Output() createDesktop = new EventEmitter<IComputer>();
+  @Output() createLaptop = new EventEmitter<IComputer>();
+
   department;
   description;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   addDesktop() {
     this.createDesktop.emit({
       department: this.department,
       description: this.description
-    })
+    });
+
+    this.department = '';
+    this.description = '';
   }
 
   addLaptop() {
+    this.createLaptop.emit({
+      department: this.department,
+      description: this.description
+    });
 
+    this.department = '';
+    this.description = '';
   }
-
 }
